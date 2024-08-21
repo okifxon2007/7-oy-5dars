@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Home from './pages/home'
+import Home from './pages/Home'
 import About from './pages/About'
 import Products from './pages/Products'
 import Cart from './pages/Cart'
