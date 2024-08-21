@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Headermain from '../components/headermain'
 import { useNavigate } from 'react-router-dom'
-
+import '../App.css'
 const Products = () => {
   const navigate = useNavigate('')
   const [cart, setCart] = useState([])
+  const [loading, setLoading] = useState(true);
   useEffect( function(){
     fetch('https://strapi-store-server.onrender.com/api/products')
     .then(resp => resp.json())
@@ -14,7 +15,15 @@ const Products = () => {
     .catch(err =>{
       console.log(err);
     })
+    .finally(() => {
+      setLoading(false);
+    });
   },[])
+  if (loading) {
+    return <div className="loader"></div>
+  ;
+  }
+
   function handleClick(id){
     navigate(`/cart/${id}`)
   }

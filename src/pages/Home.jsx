@@ -5,9 +5,11 @@ import img3 from '../assets/img/hero3.webp'
 import img4 from '../assets/img/hero4.webp'
 import Headermain from '../components/headermain'
 import { useNavigate } from 'react-router-dom'
+import '../App.css'
 const Home = () => {
   const navigate = useNavigate('')
   const [cart, setCart] = useState([])
+  const [loading, setLoading] = useState(true);
   fetch('https://strapi-store-server.onrender.com/api/products?featured=true')
   .then(resp => resp.json())
   .then(data =>{
@@ -16,6 +18,13 @@ const Home = () => {
   .catch(error =>{
     console.log(error);
   })
+  .finally(() => {
+    setLoading(false);
+  });
+  if (loading) {
+    return <div className="loader"></div>
+  ;
+  }
   function handleClick(id  ){
     navigate(`/cart/${id}`)
   }
