@@ -3,7 +3,7 @@ import img1 from '../assets/img/hero1.webp'
 import img2 from '../assets/img/hero2.webp'
 import img3 from '../assets/img/hero3.webp'
 import img4 from '../assets/img/hero4.webp'
-import Headermain from '../components/headermain'
+import Headermain from '../components/Headermain'
 import { useNavigate } from 'react-router-dom'
 import '../App.css'
 const Home = () => {

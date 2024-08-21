@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Headermain from '../components/headermain';
+import Headermain from '../components/Headermain';
 import { useNavigate, useParams } from 'react-router-dom';
 import '../App.css'
 const Cart = () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import Headermain from '../components/headermain'
+import Headermain from '../components/Headermain'
 
 const Orders = () => {
   return (

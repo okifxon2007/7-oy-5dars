@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Headermain from '../components/headermain'
+import Headermain from '../components/Headermain'
 import { useNavigate } from 'react-router-dom'
 import '../App.css'
 const Products = () => {
