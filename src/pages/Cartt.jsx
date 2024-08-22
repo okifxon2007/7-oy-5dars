@@ -43,7 +43,7 @@ const Cartt = () => {
   return (
     <div>
       <Headermain />
-      <div className="container mx-auto mt-8 max-w-[1200px] mx-auto">
+      <div className="container mx-auto mt-8 max-w-[1200px]">
         {cartItems.length === 0 ? (
           <h1 className='text-xl'>Place your order</h1>
         ) : (

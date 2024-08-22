@@ -6,7 +6,7 @@ import '../App.css';
 const Products = () => {
   const navigate = useNavigate();
   const [cart, setCart] = useState([]);
-  const [iddd, setId] = useState('1'); // `setId` va `iddd` nomlarini to'g'ri ishlating
+  const [iddd, setId] = useState('1'); 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -74,7 +74,7 @@ const Products = () => {
               <div className='flex'>
                 <div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700">Select Price <span className="ml-2 text-sm text-gray-700 ml-44">$1,000.00</span></label>
+                    <label className="block text-sm font-medium text-gray-700">Select Price <span className="text-sm text-gray-700 ml-44">$1,000.00</span></label>
                     <div className="flex items-center">
                       <input type="range" className="w-80 h-2 bg-blue-500 rounded-lg appearance-none cursor-pointer" />
                     </div>

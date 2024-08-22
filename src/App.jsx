@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/home'
 import About from './pages/About'
@@ -9,35 +9,30 @@ import Orders from './pages/Orders'
 import Error from './pages/Error'
 import Headercomp from './components/Headercomp'
 import Cartt from './pages/Cartt'
+
 function App() {
   const [token, settoken] = useState(localStorage.getItem('token'))
-  useEffect (() =>{
+  useEffect(() => {
     localStorage.setItem('token', JSON.stringify('hgftrdfrd'))
-  },[])
+  }, [])
   return (
     <>
-     <Headercomp></Headercomp>
-    <Routes>
-      <Route path='/' element = {<Home></Home>}></Route>
-      <Route path='/about' element = {<About></About>}></Route>
-      <Route path='/products' element = {<Products></Products>}></Route>
-      <Route path='/cart/:id' element = {<Cart></Cart>}></Route>
-      <Route path='/cartt' element = {<Cartt></Cartt>}></Route>
-      {
-        token && <>
-        <Route path='/checkout' element = {<Checkout></Checkout>}></Route>
-      <Route path='/orders' element ={<Orders></Orders>}></Route>
-        </>
-        
-      }
-      <Route path='*' element ={<Error></Error>}></Route>
-    </Routes>
-
-
-    
+      <Headercomp></Headercomp>
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
+        <Route path='/products' element={<Products></Products>}></Route>
+        <Route path='/cart/:id' element={<Cart></Cart>}></Route>
+        <Route path='/cartt' element={<Cartt></Cartt>}></Route>
+        {
+          token && <>
+            <Route path='/checkout' element={<Checkout></Checkout>}></Route>
+            <Route path='/orders' element={<Orders></Orders>}></Route>
+          </>
+        }
+        <Route path='*' element={<Error></Error>}></Route>
+      </Routes>
     </>
-
-   
   )
 }
 
